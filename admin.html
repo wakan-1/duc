@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم الإدارية</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="dashboard-header">
+            <h1>لوحة التحكم الإدارية</h1>
+            <button onclick="logout()" class="logout-btn">تسجيل الخروج</button>
+        </header>
+
+        <!-- شريط الإعلانات -->
+        <div class="banner-container">
+            <div class="banner-slider" id="banner-slider">
+                <div class="banner-slide active">
+                    <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200&h=300&fit=crop" alt="إعلان 1">
+                    <div class="banner-text">إعلان مهم - تحديثات النظام</div>
+                </div>
+                <div class="banner-slide">
+                    <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1200&h=300&fit=crop" alt="إعلان 2">
+                    <div class="banner-text">اجتماع الإدارة - الأسبوع القادم</div>
+                </div>
+                <div class="banner-slide">
+                    <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200&h=300&fit=crop" alt="إعلان 3">
+                    <div class="banner-text">تقرير الأداء الشهري</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2>الملفات الإدارية</h2>
+            <div class="cards-grid">
+                <div class="file-card">
+                    <div class="file-icon">📄</div>
+                    <h3>تقرير المبيعات الشهري</h3>
+                    <p>ملف PDF - تقرير شامل للمبيعات</p>
+                    <button class="download-btn" onclick="downloadFile('sales-report.pdf')">تحميل الملف</button>
+                </div>
+
+                <div class="file-card">
+                    <div class="file-icon">📊</div>
+                    <h3>إحصائيات الموظفين</h3>
+                    <p>ملف PDF - بيانات الموظفين</p>
+                    <button class="download-btn" onclick="downloadFile('employee-stats.pdf')">تحميل الملف</button>
+                </div>
+
+                <div class="file-card">
+                    <div class="file-icon">💰</div>
+                    <h3>التقرير المالي</h3>
+                    <p>ملف PDF - الوضع المالي للشركة</p>
+                    <button class="download-btn" onclick="downloadFile('financial-report.pdf')">تحميل الملف</button>
+                </div>
+
+                <div class="file-card">
+                    <div class="file-icon">📋</div>
+                    <h3>خطة العمل السنوية</h3>
+                    <p>ملف PDF - استراتيجية العمل</p>
+                    <button class="download-btn" onclick="downloadFile('annual-plan.pdf')">تحميل الملف</button>
+                </div>
+
+                <div class="file-card">
+                    <div class="file-icon">🎯</div>
+                    <h3>تقييم الأداء</h3>
+                    <p>ملف PDF - تقييم أداء الفرق</p>
+                    <button class="download-btn" onclick="downloadFile('performance-review.pdf')">تحميل الملف</button>
+                </div>
+
+                <div class="file-card">
+                    <div class="file-icon">📈</div>
+                    <h3>تحليل السوق</h3>
+                    <p>ملف PDF - دراسة السوق والمنافسين</p>
+                    <button class="download-btn" onclick="downloadFile('market-analysis.pdf')">تحميل الملف</button>
+                </div>
+            </div>
+
+            <div class="suggestions-section">
+                <h3>صندوق الاقتراحات</h3>
+                <div class="suggestion-form">
+                    <textarea id="admin-suggestion" placeholder="اكتب اقتراحك أو ملاحظتك هنا..." rows="4"></textarea>
+                    <button onclick="submitSuggestion('admin')" class="submit-btn">إرسال الاقتراح</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

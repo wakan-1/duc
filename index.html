@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام إدارة الموقع</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>مرحباً بكم في نظام إدارة الموقع</h1>
+            <p>اختر نوع الدخول المناسب لك</p>
+        </header>
+
+        <div class="login-options">
+            <div class="login-card admin-card">
+                <div class="card-icon">👨‍💼</div>
+                <h2>دخول إداري</h2>
+                <p>للمديرين والإداريين</p>
+                <input type="password" id="admin-password" placeholder="كلمة المرور الإدارية" class="password-input">
+                <button onclick="login('admin')" class="login-btn admin-btn">دخول</button>
+            </div>
+
+            <div class="login-card employee-card">
+                <div class="card-icon">👨‍💻</div>
+                <h2>دخول موظف</h2>
+                <p>للموظفين المعتمدين</p>
+                <input type="password" id="employee-password" placeholder="كلمة مرور الموظف" class="password-input">
+                <button onclick="login('employee')" class="login-btn employee-btn">دخول</button>
+            </div>
+
+            <div class="login-card visitor-card">
+                <div class="card-icon">👥</div>
+                <h2>دخول زائر</h2>
+                <p>للزوار والمتقدمين للوظائف</p>
+                <button onclick="login('visitor')" class="login-btn visitor-btn">دخول</button>
+            </div>
+        </div>
+
+        <div class="error-message" id="error-message"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

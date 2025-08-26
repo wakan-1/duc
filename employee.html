@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منطقة الموظفين</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="dashboard-header">
+            <h1>منطقة الموظفين</h1>
+            <button onclick="logout()" class="logout-btn">تسجيل الخروج</button>
+        </header>
+
+        <!-- شريط الإعلانات -->
+        <div class="banner-container">
+            <div class="banner-slider" id="banner-slider">
+                <div class="banner-slide active">
+                    <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200&h=300&fit=crop" alt="إعلان 1">
+                    <div class="banner-text">إعلان للموظفين - ورشة تدريبية</div>
+                </div>
+                <div class="banner-slide">
+                    <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1200&h=300&fit=crop" alt="إعلان 2">
+                    <div class="banner-text">مواعيد الإجازات الرسمية</div>
+                </div>
+                <div class="banner-slide">
+                    <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200&h=300&fit=crop" alt="إعلان 3">
+                    <div class="banner-text">تحديث سياسات العمل</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2>الملفات والموارد</h2>
+            <div class="cards-grid employee-grid">
+                <div class="file-card">
+                    <div class="file-icon">📋</div>
+                    <h3>دليل الموظف</h3>
+                    <p>ملف PDF - دليل شامل للموظفين الجدد</p>
+                    <button class="download-btn" onclick="downloadFile('employee-handbook.pdf')">تحميل</button>
+                </div>
+
+                <div class="file-card">
+                    <div class="file-icon">🏥</div>
+                    <h3>نماذج التأمين الصحي</h3>
+                    <p>ملف PDF - نماذج التأمين والمطالبات</p>
+                    <button class="download-btn" onclick="downloadFile('insurance-forms.pdf')">تحميل</button>
+                </div>
+
+                <div class="file-card">
+                    <div class="file-icon">📅</div>
+                    <h3>طلب إجازة</h3>
+                    <p>ملف PDF - نموذج طلب الإجازات</p>
+                    <button class="download-btn" onclick="downloadFile('leave-request.pdf')">تحميل</button>
+                </div>
+
+                <div class="file-card">
+                    <div class="file-icon">💼</div>
+                    <h3>تقرير المهام الشهري</h3>
+                    <p>ملف PDF - نموذج تقرير المهام</p>
+                    <button class="download-btn" onclick="downloadFile('monthly-tasks.pdf')">تحميل</button>
+                </div>
+
+                <div class="file-card">
+                    <div class="file-icon">🎓</div>
+                    <h3>برامج التدريب</h3>
+                    <p>ملف PDF - دورات التطوير المهني</p>
+                    <button class="download-btn" onclick="downloadFile('training-programs.pdf')">تحميل</button>
+                </div>
+
+                <div class="file-card">
+                    <div class="file-icon">📊</div>
+                    <h3>تقييم الأداء الذاتي</h3>
+                    <p>ملف PDF - نموذج التقييم الذاتي</p>
+                    <button class="download-btn" onclick="downloadFile('self-evaluation.pdf')">تحميل</button>
+                </div>
+
+                <div class="file-card">
+                    <div class="file-icon">🔒</div>
+                    <h3>سياسات الأمان</h3>
+                    <p>ملف PDF - إرشادات الأمان والحماية</p>
+                    <button class="download-btn" onclick="downloadFile('security-policies.pdf')">تحميل</button>
+                </div>
+
+                <div class="file-card">
+                    <div class="file-icon">📞</div>
+                    <h3>دليل الاتصالات</h3>
+                    <p>ملف PDF - أرقام وعناوين مهمة</p>
+                    <button class="download-btn" onclick="downloadFile('contact-directory.pdf')">تحميل</button>
+                </div>
+
+                <div class="file-card">
+                    <div class="file-icon">⚙️</div>
+                    <h3>إجراءات العمل</h3>
+                    <p>ملف PDF - الإجراءات التشغيلية المعيارية</p>
+                    <button class="download-btn" onclick="downloadFile('work-procedures.pdf')">تحميل</button>
+                </div>
+            </div>
+
+            <div class="suggestions-section">
+                <h3>صندوق الاقتراحات</h3>
+                <div class="suggestion-form">
+                    <textarea id="employee-suggestion" placeholder="شاركنا اقتراحاتك لتحسين بيئة العمل..." rows="4"></textarea>
+                    <button onclick="submitSuggestion('employee')" class="submit-btn">إرسال الاقتراح</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

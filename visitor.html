@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منطقة الزوار - التقديم للوظائف</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="dashboard-header">
+            <h1>مرحباً بك في منطقة الزوار</h1>
+            <button onclick="logout()" class="logout-btn">العودة للصفحة الرئيسية</button>
+        </header>
+
+        <!-- شريط الإعلانات -->
+        <div class="banner-container">
+            <div class="banner-slider" id="banner-slider">
+                <div class="banner-slide active">
+                    <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200&h=300&fit=crop" alt="إعلان 1">
+                    <div class="banner-text">وظائف شاغرة - تقدم الآن!</div>
+                </div>
+                <div class="banner-slide">
+                    <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1200&h=300&fit=crop" alt="إعلان 2">
+                    <div class="banner-text">برنامج التدريب للخريجين</div>
+                </div>
+                <div class="banner-slide">
+                    <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200&h=300&fit=crop" alt="إعلان 3">
+                    <div class="banner-text">انضم إلى فريقنا المتميز</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2>الوظائف المتاحة والتقديم</h2>
+            
+            <div class="job-links-section">
+                <div class="job-category">
+                    <h3>🏢 الوظائف الإدارية</h3>
+                    <div class="job-links">
+                        <a href="#" class="job-link" onclick="applyForJob('مدير مشروع')">
+                            <span class="job-title">مدير مشروع</span>
+                            <span class="job-desc">خبرة 5 سنوات في إدارة المشاريع</span>
+                        </a>
+                        <a href="#" class="job-link" onclick="applyForJob('محاسب')">
+                            <span class="job-title">محاسب</span>
+                            <span class="job-desc">بكالوريوس محاسبة + خبرة 3 سنوات</span>
+                        </a>
+                        <a href="#" class="job-link" onclick="applyForJob('مساعد إداري')">
+                            <span class="job-title">مساعد إداري</span>
+                            <span class="job-desc">دبلوم إدارة أعمال</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="job-category">
+                    <h3>💻 الوظائف التقنية</h3>
+                    <div class="job-links">
+                        <a href="#" class="job-link" onclick="applyForJob('مطور ويب')">
+                            <span class="job-title">مطور ويب</span>
+                            <span class="job-desc">خبرة في HTML, CSS, JavaScript</span>
+                        </a>
+                        <a href="#" class="job-link" onclick="applyForJob('مصمم جرافيك')">
+                            <span class="job-title">مصمم جرافيك</span>
+                            <span class="job-desc">إتقان Adobe Creative Suite</span>
+                        </a>
+                        <a href="#" class="job-link" onclick="applyForJob('محلل أنظمة')">
+                            <span class="job-title">محلل أنظمة</span>
+                            <span class="job-desc">بكالوريوس حاسوب + خبرة 4 سنوات</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="job-category">
+                    <h3>🛍️ المبيعات والتسويق</h3>
+                    <div class="job-links">
+                        <a href="#" class="job-link" onclick="applyForJob('مندوب مبيعات')">
+                            <span class="job-title">مندوب مبيعات</span>
+                            <span class="job-desc">خبرة في المبيعات والتعامل مع العملاء</span>
+                        </a>
+                        <a href="#" class="job-link" onclick="applyForJob('أخصائي تسويق')">
+                            <span class="job-title">أخصائي تسويق</span>
+                            <span class="job-desc">خبرة في التسويق الرقمي</span>
+                        </a>
+                        <a href="#" class="job-link" onclick="applyForJob('خدمة عملاء')">
+                            <span class="job-title">خدمة عملاء</span>
+                            <span class="job-desc">مهارات تواصل ممتازة</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="job-category">
+                    <h3>🎓 التدريب والتطوير</h3>
+                    <div class="job-links">
+                        <a href="#" class="job-link" onclick="applyForJob('برنامج التدريب للخريجين')">
+                            <span class="job-title">برنامج التدريب للخريجين</span>
+                            <span class="job-desc">للخريجين الجدد في جميع التخصصات</span>
+                        </a>
+                        <a href="#" class="job-link" onclick="applyForJob('تدريب صيفي')">
+                            <span class="job-title">تدريب صيفي</span>
+                            <span class="job-desc">فرص تدريب للطلاب الجامعيين</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="application-info">
+                <h3>📋 معلومات التقديم</h3>
+                <div class="info-box">
+                    <p><strong>المستندات المطلوبة:</strong></p>
+                    <ul>
+                        <li>السيرة الذاتية محدثة</li>
+                        <li>صورة شخصية</li>
+                        <li>صور المؤهلات العلمية</li>
+                        <li>خطابات التوصية (إن وجدت)</li>
+                    </ul>
+                    <p><strong>طريقة التقديم:</strong> اضغط على الوظيفة المرغوبة وسيتم توجيهك لنموذج التقديم</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
