@@ -249,6 +249,17 @@ function preventCopyPaste() {
 
 // تشغيل الدوال عند تحميل الصفحة
 document.addEventListener('DOMContentLoaded', function() {
+    // إخفاء شاشة التحميل
+    setTimeout(() => {
+        const loadingScreen = document.getElementById('loading-screen');
+        if (loadingScreen) {
+            loadingScreen.classList.add('hidden');
+        }
+    }, 1500);
+    
+    // إنشاء تأثير الجسيمات
+    createParticles();
+    
     // التحقق من الحماية
     checkPageAccess();
     
@@ -269,6 +280,31 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// إنشاء تأثير الجسيمات
+function createParticles() {
+    const particlesContainer = document.createElement('div');
+    particlesContainer.className = 'particles';
+    document.body.appendChild(particlesContainer);
+    
+    function createParticle() {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 8 + 's';
+        particle.style.animationDuration = (Math.random() * 3 + 5) + 's';
+        particlesContainer.appendChild(particle);
+        
+        setTimeout(() => {
+            if (particle.parentNode) {
+                particle.parentNode.removeChild(particle);
+            }
+        }, 8000);
+    }
+    
+    // إنشاء جسيمة جديدة كل ثانية
+    setInterval(createParticle, 1000);
+}
 
 // التحقق من الجلسة كل دقيقة
 setInterval(() => {
